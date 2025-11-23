@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Management System - Presentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Slides Wrapper -->
+        <main class="slides-wrapper" id="slidesWrapper">
+            
+            <!-- Slide 1: Title -->
+            <section class="slide active" data-id="1">
+                <div class="content-center">
+                    <h1 class="text-blue-dark">Development of a Waste Management System</h1>
+                    <h2 class="text-blue-light">To Enhance Guest Retention in Hospitality Industries Using the Technology Acceptance Model</h2>
+                    <div class="divider"></div>
+                    <div class="details">
+                        <p><strong>By:</strong> Onyeachonam, Buchi Benedict</p>
+                        <p><strong>Supervisor:</strong> Mr. Henry Ogbu</p>
+                        <p class="date">July, 2026</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 2: Introduction -->
+            <section class="slide" data-id="2">
+                <div class="header">
+                    <h3>Introduction</h3>
+                </div>
+                <div class="content-split">
+                    <div class="text-block">
+                        <p class="lead">Waste accumulation is a primary global concern, rising rapidly with population growth and industrialization.</p>
+                        <ul class="bullet-list">
+                            <li><strong>Global Impact:</strong> Municipal solid waste (MSW) expected to reach 3.40 billion tonnes annually by 2050.</li>
+                            <li><strong>Hospitality Sector:</strong> A major contributor to waste generation, facing challenges in resource management and sustainability.</li>
+                            <li><strong>Current Issues:</strong> Improper disposal, carbon emissions, and lack of efficient routing systems.</li>
+                        </ul>
+                    </div>
+                    <div class="visual-block stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">3.40B</span>
+                            <span class="stat-label">Tonnes Annually by 2050</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">23M</span>
+                            <span class="stat-label">Tons of Food Waste/Year</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Statement of the Problem -->
+            <section class="slide" data-id="3">
+                <div class="header">
+                    <h3>Statement of the Problem</h3>
+                </div>
+                <div class="content-center">
+                    <div class="problem-box">
+                        <div class="icon-circle">!</div>
+                        <h4>Resource Management Challenges</h4>
+                        <p>Hospitality industries struggle with waste management, customer retention, and adherence to SDG goals.</p>
+                    </div>
+                    <div class="problem-grid">
+                        <div class="problem-item">
+                            <h5>Inefficiency</h5>
+                            <p>Manual collection leads to overflow and health hazards.</p>
+                        </div>
+                        <div class="problem-item">
+                            <h5>Sustainability</h5>
+                            <p>Lack of "Green" practices affects eco-conscious guest retention.</p>
+                        </div>
+                        <div class="problem-item">
+                            <h5>Technology Gap</h5>
+                            <p>Limited use of IoT for real-time monitoring and routing.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Aim & Objectives -->
+            <section class="slide" data-id="4">
+                <div class="header">
+                    <h3>Aim & Objectives</h3>
+                </div>
+                <div class="content-split">
+                    <div class="text-block">
+                        <h4>Aim</h4>
+                        <p>To develop a web-based system incubating <strong>Smart Waste Bins</strong> across hospitality industries that tracks waste levels and connects to garbage collection services.</p>
+                    </div>
+                    <div class="text-block bg-light">
+                        <h4>Key Objectives</h4>
+                        <ul class="check-list">
+                            <li>Design a web-based eco-tech architecture.</li>
+                            <li>Integrate Garbage Collection Services (GCS) & Smart Bins.</li>
+                            <li>Implement secure payment gateways & resource management.</li>
+                            <li>Evaluate usability using the Technology Acceptance Model (TAM).</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Methodology -->
+            <section class="slide" data-id="5">
+                <div class="header">
+                    <h3>Methodology</h3>
+                </div>
+                <div class="content-grid">
+                    <div class="tech-card">
+                        <h4>Frontend</h4>
+                        <p>React JS, TailwindCSS</p>
+                    </div>
+                    <div class="tech-card">
+                        <h4>Backend</h4>
+                        <p>Node.js, Express.js</p>
+                    </div>
+                    <div class="tech-card">
+                        <h4>Database</h4>
+                        <p>MongoDB</p>
+                    </div>
+                    <div class="tech-card highlight">
+                        <h4>Hardware (IoT)</h4>
+                        <p>Ultrasonic Sensor (HC-SR04), Load Cell + HX711, Arduino</p>
+                    </div>
+                </div>
+                <div class="diagram-note">
+                    <p>Agile Development Lifecycle</p>
+                </div>
+            </section>
+
+            <!-- Slide 6: Technology Acceptance Model (TAM) -->
+            <section class="slide" data-id="6">
+                <div class="header">
+                    <h3>Theoretical Framework (TAM)</h3>
+                </div>
+                <div class="content-center">
+                    <p class="subtitle">Explaining user acceptance of the new waste management technology.</p>
+                    <div class="tam-diagram">
+                        <div class="tam-box">Perceived Usefulness (PU)</div>
+                        <div class="arrow">→</div>
+                        <div class="tam-box">Attitude Towards Using</div>
+                        <div class="arrow">→</div>
+                        <div class="tam-box">Behavioral Intention</div>
+                        <div class="arrow">→</div>
+                        <div class="tam-box solid">Actual System Use</div>
+                    </div>
+                    <div class="tam-diagram secondary">
+                        <div class="tam-box">Perceived Ease of Use (PEOU)</div>
+                        <div class="arrow-up">⤴</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: System Architecture -->
+            <section class="slide" data-id="7">
+                <div class="header">
+                    <h3>System Architecture</h3>
+                </div>
+                <div class="content-center">
+                    <div class="arch-layer">
+                        <span class="layer-name">Presentation Layer</span>
+                        <span class="layer-desc">Web Interface (React), Dashboards</span>
+                    </div>
+                    <div class="arch-arrow">⬇⬆ API Layer</div>
+                    <div class="arch-layer">
+                        <span class="layer-name">Application Layer</span>
+                        <span class="layer-desc">Node.js Server, Logic, Processing</span>
+                    </div>
+                    <div class="arch-arrow">⬇⬆ Data</div>
+                    <div class="arch-layer">
+                        <span class="layer-name">Database Layer</span>
+                        <span class="layer-desc">MongoDB (Users, Sensor Data, Transactions)</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Conclusion -->
+            <section class="slide" data-id="8">
+                <div class="content-center">
+                    <h2 class="text-blue-dark">Conclusion</h2>
+                    <p class="final-text">
+                        This system bridges the gap between <strong>Hospitality</strong> and <strong>Waste Management</strong> services.
+                        By leveraging IoT and web technologies, it ensures cleaner environments, improves operational efficiency, 
+                        and ultimately enhances <strong>Guest Retention</strong> through eco-friendly practices.
+                    </p>
+                    <div class="thank-you">Thank You</div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Navigation Controls -->
+        <div class="controls">
+            <button id="prevBtn" class="nav-btn" disabled>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg>
+                Previous
+            </button>
+            <span class="slide-indicator" id="slideIndicator">1 / 8</span>
+            <button id="nextBtn" class="nav-btn">
+                Next
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
