@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Waste Management System - Presentation</title>
+    <title>Waste Management System - Project Presentation</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts for modern typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="presentation-container">
-        <!-- Progress Bar -->
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
+        <!-- Top Navigation / Progress -->
+        <div class="top-bar">
+            <div class="logo">Covenant University</div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+            <div class="slide-counter" id="slideIndicator">01 / 20</div>
         </div>
 
         <!-- Slides Wrapper -->
@@ -20,14 +23,24 @@
             
             <!-- Slide 1: Title -->
             <section class="slide active" data-id="1">
-                <div class="content-center">
-                    <h1 class="text-blue-dark">Development of a Waste Management System</h1>
-                    <h2 class="text-blue-light">To Enhance Guest Retention in Hospitality Industries Using the Technology Acceptance Model</h2>
-                    <div class="divider"></div>
-                    <div class="details">
-                        <p><strong>By:</strong> Onyeachonam, Buchi Benedict</p>
-                        <p><strong>Supervisor:</strong> Mr. Henry Ogbu</p>
-                        <p class="date">July, 2026</p>
+                <div class="content-center hero-slide">
+                    <div class="decoration-circle"></div>
+                    <h1 class="animate-text">Development of a Waste Management System</h1>
+                    <h2 class="animate-text delay-1">To Enhance Guest Retention in Hospitality Industries Using the Technology Acceptance Model</h2>
+                    <div class="divider animate-width delay-2"></div>
+                    <div class="details animate-fade delay-3">
+                        <div class="detail-item">
+                            <span class="label">Student</span>
+                            <span class="value">Onyeachonam, Buchi Benedict</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Supervisor</span>
+                            <span class="value">Mr. Henry Ogbu</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Date</span>
+                            <span class="value">July, 2026</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -40,178 +53,496 @@
                 <div class="content-split">
                     <div class="text-block">
                         <p class="lead">Waste accumulation is a primary global concern, rising rapidly with population growth and industrialization.</p>
-                        <ul class="bullet-list">
-                            <li><strong>Global Impact:</strong> Municipal solid waste (MSW) expected to reach 3.40 billion tonnes annually by 2050.</li>
-                            <li><strong>Hospitality Sector:</strong> A major contributor to waste generation, facing challenges in resource management and sustainability.</li>
-                            <li><strong>Current Issues:</strong> Improper disposal, carbon emissions, and lack of efficient routing systems.</li>
-                        </ul>
+                        <p>Current disposal methods involves uncontrolled dumping which is injurious to human health and the environment.</p>
+                        <div class="highlight-box">
+                            "Efficient waste management techniques can be accomplished using smart waste bins."
+                        </div>
                     </div>
                     <div class="visual-block stats-grid">
-                        <div class="stat-card">
-                            <span class="stat-number">3.40B</span>
-                            <span class="stat-label">Tonnes Annually by 2050</span>
+                        <div class="stat-card glass">
+                            <span class="stat-number">3.4B</span>
+                            <span class="stat-label">Tonnes of MSW annually by 2050</span>
                         </div>
-                        <div class="stat-card">
-                            <span class="stat-number">23M</span>
-                            <span class="stat-label">Tons of Food Waste/Year</span>
+                        <div class="stat-card glass">
+                            <span class="stat-number">4634</span>
+                            <span class="stat-label">Tons/Day in major cities</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Slide 3: Statement of the Problem -->
+            <!-- Slide 3: Problem Statement - Context -->
             <section class="slide" data-id="3">
                 <div class="header">
                     <h3>Statement of the Problem</h3>
                 </div>
                 <div class="content-center">
-                    <div class="problem-box">
-                        <div class="icon-circle">!</div>
-                        <h4>Resource Management Challenges</h4>
-                        <p>Hospitality industries struggle with waste management, customer retention, and adherence to SDG goals.</p>
-                    </div>
-                    <div class="problem-grid">
-                        <div class="problem-item">
-                            <h5>Inefficiency</h5>
-                            <p>Manual collection leads to overflow and health hazards.</p>
+                    <div class="problem-wrapper">
+                        <div class="problem-card main">
+                            <div class="icon">⚠</div>
+                            <h4>Resource Management</h4>
+                            <p>Hospitality industries struggle with efficient resource management, particularly waste, water, and energy.</p>
                         </div>
-                        <div class="problem-item">
-                            <h5>Sustainability</h5>
-                            <p>Lack of "Green" practices affects eco-conscious guest retention.</p>
+                        <div class="problem-arrows">
+                            <span>▼</span>
+                            <span>▼</span>
+                            <span>▼</span>
                         </div>
-                        <div class="problem-item">
-                            <h5>Technology Gap</h5>
-                            <p>Limited use of IoT for real-time monitoring and routing.</p>
+                        <div class="sub-problems">
+                            <div class="problem-card sub">
+                                <h5>Sustainability Gap</h5>
+                                <p>Poor adherence to SDG goals affects brand reputation.</p>
+                            </div>
+                            <div class="problem-card sub">
+                                <h5>Customer Retention</h5>
+                                <p>Eco-conscious guests avoid non-sustainable hotels.</p>
+                            </div>
+                            <div class="problem-card sub">
+                                <h5>Operational Cost</h5>
+                                <p>Inefficient manual collection wastes labor and fuel.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Slide 4: Aim & Objectives -->
+            <!-- Slide 4: Problem Statement - The Gap -->
             <section class="slide" data-id="4">
                 <div class="header">
-                    <h3>Aim & Objectives</h3>
+                    <h3>The Research Gap</h3>
+                </div>
+                <div class="content-split">
+                    <ul class="gap-list">
+                        <li>
+                            <strong>Global Context</strong>
+                            <p>Existing IoT solutions often fail in developing countries due to socioeconomic factors and infrastructure.</p>
+                        </li>
+                        <li>
+                            <strong>Hospitality Focus</strong>
+                            <p>Current studies lack holistic strategies for customer retention through waste management.</p>
+                        </li>
+                        <li>
+                            <strong>Food Waste</strong>
+                            <p>Insufficient exploration of customer food wastage behaviors in hospitality.</p>
+                        </li>
+                    </ul>
+                    <div class="visual-block center-img">
+                        <div class="gap-circle">
+                            <span>Research<br>Gap</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Aim of the Study -->
+            <section class="slide" data-id="5">
+                <div class="header">
+                    <h3>Aim of the Study</h3>
+                </div>
+                <div class="content-center">
+                    <div class="aim-box glass">
+                        <p class="aim-text">
+                            To develop a <span class="highlight">web-based system</span> that incubates 
+                            <span class="highlight">smart-waste bins</span> across hospitality industries 
+                            that tracks waste level, sends corresponding data to web-based service, 
+                            and connects these industries to garbage collection services.
+                        </p>
+                        <div class="aim-footer">
+                            Goal: Enhance Customer Retention via Technology Acceptance Model (TAM)
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Objectives 1 & 2 -->
+            <section class="slide" data-id="6">
+                <div class="header">
+                    <h3>Objectives (1-2)</h3>
+                </div>
+                <div class="content-grid">
+                    <div class="objective-card">
+                        <div class="obj-num">01</div>
+                        <h4>Literature Review</h4>
+                        <p>Conduct extensive review of current waste management technologies and their effectiveness in hospitality.</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="obj-num">02</div>
+                        <h4>System Design</h4>
+                        <p>Design a web-based eco-tech architecture tailored for hospitality (Garbage collection, Smart Bins, Reviews).</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Objectives 3 & 4 -->
+            <section class="slide" data-id="7">
+                <div class="header">
+                    <h3>Objectives (3-4)</h3>
+                </div>
+                <div class="content-grid">
+                    <div class="objective-card">
+                        <div class="obj-num">03</div>
+                        <h4>Implementation</h4>
+                        <p>Implement the system using appropriate tools (MERN Stack, IoT Sensors).</p>
+                    </div>
+                    <div class="objective-card">
+                        <div class="obj-num">04</div>
+                        <h4>Evaluation</h4>
+                        <p>Evaluate usability, functionality, and user satisfaction through user testing and feedback.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Existing Systems Review -->
+            <section class="slide" data-id="8">
+                <div class="header">
+                    <h3>Literature Review: Existing Systems</h3>
+                </div>
+                <div class="content-grid-3">
+                    <div class="review-card">
+                        <h5>WasteLinq</h5>
+                        <p>Waste management SaaS. Good for compliance but <strong>not specialized</strong> for hospitality.</p>
+                    </div>
+                    <div class="review-card">
+                        <h5>Sensoneo</h5>
+                        <p>Smart sensors & route planning. Focuses on municipalities, <strong>lacks hospitality integration</strong>.</p>
+                    </div>
+                    <div class="review-card">
+                        <h5>GarGeon</h5>
+                        <p>Business waste management. <strong>Geographically limited</strong> and specific.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Methodology Overview -->
+            <section class="slide" data-id="9">
+                <div class="header">
+                    <h3>Methodology Overview</h3>
+                </div>
+                <div class="content-center">
+                    <div class="method-flow">
+                        <div class="step">
+                            <span class="step-icon">📚</span>
+                            <span>Literature Review</span>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="step">
+                            <span class="step-icon">📐</span>
+                            <span>System Design (UML)</span>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="step">
+                            <span class="step-icon">💻</span>
+                            <span>Implementation (MERN + IoT)</span>
+                        </div>
+                        <div class="arrow">→</div>
+                        <div class="step">
+                            <span class="step-icon">🧪</span>
+                            <span>Evaluation (TAM)</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Hardware Methodology -->
+            <section class="slide" data-id="10">
+                <div class="header">
+                    <h3>Hardware Components</h3>
+                </div>
+                <div class="content-split">
+                    <div class="component-list">
+                        <div class="comp-item">
+                            <strong>Ultrasonic Sensor (HC-SR04)</strong>
+                            <p>Measures distance to waste surface to determine fill level.</p>
+                        </div>
+                        <div class="comp-item">
+                            <strong>Load Cell + HX711</strong>
+                            <p>Measures the physical weight of the waste.</p>
+                        </div>
+                        <div class="comp-item">
+                            <strong>Microcontroller (Arduino/ESP8266)</strong>
+                            <p>Processes sensor data and sends it to the cloud via Wi-Fi.</p>
+                        </div>
+                    </div>
+                    <div class="visual-block diagram-visual">
+                        <div class="sensor-diagram">
+                            <div class="bin-lid">
+                                <div class="sensor-box">HC-SR04</div>
+                            </div>
+                            <div class="bin-body">
+                                <div class="waste-level">Waste Level</div>
+                            </div>
+                            <div class="bin-base">
+                                <div class="sensor-box">Load Cell</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 11: Hardware Logic -->
+            <section class="slide" data-id="11">
+                <div class="header">
+                    <h3>Sensor Logic & Algorithms</h3>
                 </div>
                 <div class="content-split">
                     <div class="text-block">
-                        <h4>Aim</h4>
-                        <p>To develop a web-based system incubating <strong>Smart Waste Bins</strong> across hospitality industries that tracks waste levels and connects to garbage collection services.</p>
+                        <h4>Distance Calculation</h4>
+                        <div class="code-block">
+                            Distance = (Time × Speed of Sound) / 2
+                        </div>
+                        <p>If <strong>Distance < Threshold</strong>, bin is FULL.</p>
+                        
+                        <h4>Weight-Volume Correlation</h4>
+                        <p>Ensures accuracy by correlating volume (Ultrasonic) and weight (Load Cell).</p>
+                        <div class="math-block">
+                            r = [nΣxy - (Σx)(Σy)] / √[...]
+                        </div>
                     </div>
-                    <div class="text-block bg-light">
-                        <h4>Key Objectives</h4>
-                        <ul class="check-list">
-                            <li>Design a web-based eco-tech architecture.</li>
-                            <li>Integrate Garbage Collection Services (GCS) & Smart Bins.</li>
-                            <li>Implement secure payment gateways & resource management.</li>
-                            <li>Evaluate usability using the Technology Acceptance Model (TAM).</li>
+                     <div class="text-block">
+                        <h4>Operational Logic</h4>
+                        <ul class="step-list">
+                            <li>1. Sensors measure Data</li>
+                            <li>2. MCU processes Data</li>
+                            <li>3. If Level > 90% → <strong>Status: FULL</strong></li>
+                            <li>4. Send Data to Web Server via API</li>
+                            <li>5. Notify Garbage Collector</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- Slide 5: Methodology -->
-            <section class="slide" data-id="5">
+            <!-- Slide 12: Software Stack -->
+            <section class="slide" data-id="12">
                 <div class="header">
-                    <h3>Methodology</h3>
+                    <h3>Software Development Stack</h3>
                 </div>
-                <div class="content-grid">
-                    <div class="tech-card">
-                        <h4>Frontend</h4>
-                        <p>React JS, TailwindCSS</p>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <span class="tech-icon">⚛</span>
+                        <h4>React.js</h4>
+                        <p>Frontend User Interface</p>
                     </div>
-                    <div class="tech-card">
-                        <h4>Backend</h4>
-                        <p>Node.js, Express.js</p>
+                    <div class="tech-item">
+                        <span class="tech-icon">🟢</span>
+                        <h4>Node.js</h4>
+                        <p>Runtime Environment</p>
                     </div>
-                    <div class="tech-card">
-                        <h4>Database</h4>
-                        <p>MongoDB</p>
+                    <div class="tech-item">
+                        <span class="tech-icon">🚂</span>
+                        <h4>Express.js</h4>
+                        <p>Backend Framework</p>
                     </div>
-                    <div class="tech-card highlight">
-                        <h4>Hardware (IoT)</h4>
-                        <p>Ultrasonic Sensor (HC-SR04), Load Cell + HX711, Arduino</p>
+                    <div class="tech-item">
+                        <span class="tech-icon">🍃</span>
+                        <h4>MongoDB</h4>
+                        <p>NoSQL Database</p>
                     </div>
-                </div>
-                <div class="diagram-note">
-                    <p>Agile Development Lifecycle</p>
-                </div>
-            </section>
-
-            <!-- Slide 6: Technology Acceptance Model (TAM) -->
-            <section class="slide" data-id="6">
-                <div class="header">
-                    <h3>Theoretical Framework (TAM)</h3>
-                </div>
-                <div class="content-center">
-                    <p class="subtitle">Explaining user acceptance of the new waste management technology.</p>
-                    <div class="tam-diagram">
-                        <div class="tam-box">Perceived Usefulness (PU)</div>
-                        <div class="arrow">→</div>
-                        <div class="tam-box">Attitude Towards Using</div>
-                        <div class="arrow">→</div>
-                        <div class="tam-box">Behavioral Intention</div>
-                        <div class="arrow">→</div>
-                        <div class="tam-box solid">Actual System Use</div>
-                    </div>
-                    <div class="tam-diagram secondary">
-                        <div class="tam-box">Perceived Ease of Use (PEOU)</div>
-                        <div class="arrow-up">⤴</div>
+                    <div class="tech-item">
+                        <span class="tech-icon">🎨</span>
+                        <h4>TailwindCSS</h4>
+                        <p>Styling Framework</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Slide 7: System Architecture -->
-            <section class="slide" data-id="7">
+            <!-- Slide 13: System Architecture -->
+            <section class="slide" data-id="13">
                 <div class="header">
                     <h3>System Architecture</h3>
                 </div>
                 <div class="content-center">
-                    <div class="arch-layer">
-                        <span class="layer-name">Presentation Layer</span>
-                        <span class="layer-desc">Web Interface (React), Dashboards</span>
-                    </div>
-                    <div class="arch-arrow">⬇⬆ API Layer</div>
-                    <div class="arch-layer">
-                        <span class="layer-name">Application Layer</span>
-                        <span class="layer-desc">Node.js Server, Logic, Processing</span>
-                    </div>
-                    <div class="arch-arrow">⬇⬆ Data</div>
-                    <div class="arch-layer">
-                        <span class="layer-name">Database Layer</span>
-                        <span class="layer-desc">MongoDB (Users, Sensor Data, Transactions)</span>
+                    <div class="architecture-diagram">
+                        <div class="arch-column">
+                            <div class="arch-box hardware">
+                                <h5>Smart Bin</h5>
+                                <p>Sensors & MCU</p>
+                            </div>
+                        </div>
+                        <div class="arch-arrow-right">IoT Data</div>
+                        <div class="arch-column">
+                            <div class="arch-box server">
+                                <h5>Web Server</h5>
+                                <p>API & Logic</p>
+                            </div>
+                            <div class="arch-box db">
+                                <h5>Database</h5>
+                                <p>MongoDB</p>
+                            </div>
+                        </div>
+                        <div class="arch-arrow-right">HTTP/WS</div>
+                        <div class="arch-column">
+                            <div class="arch-box client">
+                                <h5>Hospitality Dashboard</h5>
+                            </div>
+                            <div class="arch-box client">
+                                <h5>Collector Dashboard</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Slide 8: Conclusion -->
-            <section class="slide" data-id="8">
+            <!-- Slide 14: Use Case Diagram -->
+            <section class="slide" data-id="14">
+                <div class="header">
+                    <h3>Use Case Diagram</h3>
+                </div>
                 <div class="content-center">
-                    <h2 class="text-blue-dark">Conclusion</h2>
-                    <p class="final-text">
-                        This system bridges the gap between <strong>Hospitality</strong> and <strong>Waste Management</strong> services.
-                        By leveraging IoT and web technologies, it ensures cleaner environments, improves operational efficiency, 
-                        and ultimately enhances <strong>Guest Retention</strong> through eco-friendly practices.
-                    </p>
-                    <div class="thank-you">Thank You</div>
+                    <div class="diagram-container use-case">
+                        <div class="actor">Hospitality Admin</div>
+                        <div class="system-boundary glass">
+                            <div class="use-case-oval">Register/Login</div>
+                            <div class="use-case-oval">View Waste Levels</div>
+                            <div class="use-case-oval">Request Pickup</div>
+                            <div class="use-case-oval">Make Payment</div>
+                        </div>
+                        <div class="actor">Garbage Collector</div>
+                    </div>
+                    <p class="caption">Interactions between key actors and system functions</p>
+                </div>
+            </section>
+
+             <!-- Slide 15: Sequence Diagram -->
+             <section class="slide" data-id="15">
+                <div class="header">
+                    <h3>Sequence Diagram (Pickup Flow)</h3>
+                </div>
+                <div class="content-center">
+                    <div class="sequence-diagram">
+                        <div class="lifeline">Bin Sensor</div>
+                        <div class="lifeline">Server</div>
+                        <div class="lifeline">Collector</div>
+                        
+                        <!-- Interactions -->
+                        <div class="seq-arrow a1">Detect Full →</div>
+                        <div class="seq-arrow a2">← Ack Data</div>
+                        <div class="seq-arrow a3">Alert Pickup →</div>
+                        <div class="seq-arrow a4">← Confirm</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 16: Technology Acceptance Model -->
+            <section class="slide" data-id="16">
+                <div class="header">
+                    <h3>Theoretical Framework (TAM)</h3>
+                </div>
+                <div class="content-center">
+                    <div class="tam-flow">
+                        <div class="tam-group">
+                            <div class="tam-node">External Variables</div>
+                        </div>
+                        <div class="tam-arrow">➡</div>
+                        <div class="tam-group vertical">
+                            <div class="tam-node blue">Perceived Usefulness</div>
+                            <div class="tam-node blue">Perceived Ease of Use</div>
+                        </div>
+                        <div class="tam-arrow">➡</div>
+                        <div class="tam-group">
+                            <div class="tam-node">Attitude Towards Using</div>
+                        </div>
+                        <div class="tam-arrow">➡</div>
+                        <div class="tam-group">
+                            <div class="tam-node solid">Actual System Use</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 17: Significance of Study -->
+            <section class="slide" data-id="17">
+                <div class="header">
+                    <h3>Significance of Study</h3>
+                </div>
+                <div class="content-grid">
+                    <div class="sig-card">
+                        <h4>Centralized Hub</h4>
+                        <p>Connects hospitality industries directly to waste collectors.</p>
+                    </div>
+                    <div class="sig-card">
+                        <h4>Secure Payments</h4>
+                        <p>Standardized financial rates and secure gateways.</p>
+                    </div>
+                    <div class="sig-card">
+                        <h4>Eco-Friendly Ecosystem</h4>
+                        <p>Reduces reliance on traditional, inefficient methods.</p>
+                    </div>
+                    <div class="sig-card">
+                        <h4>Guest Experience</h4>
+                        <p>Clean environments lead to higher guest retention.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 18: Expected Outcomes -->
+            <section class="slide" data-id="18">
+                <div class="header">
+                    <h3>Expected Outcomes</h3>
+                </div>
+                <ul class="outcome-list">
+                    <li>
+                        <span class="check">✓</span>
+                        <span>Real-time monitoring of waste levels in hospitality sectors.</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span>Automated alerts reducing overflow and health hazards.</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span>Efficient routing for garbage collectors (Cost/Fuel savings).</span>
+                    </li>
+                    <li>
+                        <span class="check">✓</span>
+                        <span>Positive user acceptance based on TAM evaluation.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Slide 19: Conclusion -->
+            <section class="slide" data-id="19">
+                <div class="header">
+                    <h3>Conclusion</h3>
+                </div>
+                <div class="content-split">
+                    <div class="text-block">
+                        <p>This project successfully designs a web-based system integrating IoT smart bins for the hospitality industry.</p>
+                        <p>By addressing the research gap in customer-focused waste management, the system promotes:</p>
+                        <ul class="bullet-list">
+                            <li>Sustainability</li>
+                            <li>Operational Efficiency</li>
+                            <li>Improved Guest Retention</li>
+                        </ul>
+                    </div>
+                    <div class="visual-block center-img">
+                        <div class="final-icon">🌍</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 20: End -->
+            <section class="slide" data-id="20">
+                <div class="content-center hero-slide">
+                    <h1 class="text-blue-dark">Thank You</h1>
+                    <p>Questions & Answers</p>
+                    <div class="divider"></div>
+                    <div class="end-credits">
+                        <p>Onyeachonam, Buchi Benedict</p>
+                        <p>Department of Computer Science</p>
+                        <p>Covenant University</p>
+                    </div>
                 </div>
             </section>
 
         </main>
 
         <!-- Navigation Controls -->
-        <div class="controls">
+        <div class="controls-container">
             <button id="prevBtn" class="nav-btn" disabled>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M15 18l-6-6 6-6" />
-                </svg>
-                Previous
+                ← Previous
             </button>
-            <span class="slide-indicator" id="slideIndicator">1 / 8</span>
             <button id="nextBtn" class="nav-btn">
-                Next
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 18l6-6-6-6" />
-                </svg>
+                Next →
             </button>
         </div>
     </div>
