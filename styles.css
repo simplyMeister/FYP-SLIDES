@@ -190,6 +190,8 @@ h3 {
   margin-bottom: 2rem;
   color: var(--text-primary);
   letter-spacing: -0.01em;
+   justify-content: center; /* horizontal */
+    align-items: center;
 }
 
 h4 {
