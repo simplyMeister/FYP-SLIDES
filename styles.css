@@ -536,6 +536,9 @@ p {
   color: var(--accent);
   font-weight: 600;
 }
+.highlight {
+   color : #00FF00;
+}
 
 .highlight-box {
   background: var(--bg-secondary);
