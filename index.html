@@ -87,18 +87,20 @@
 <section class="slide">
 <h3>The Research Gap</h3>
 <div class="content-center">
-<div class="gap-grid">
-<div class="gap-card">
+<div class="problem-wrapper">
+<div class="sub-problems">
+<div class="problem-card">
 <h4>Global Context</h4>
 <p>Existing IoT solutions often fail in developing countries due to socioeconomic factors and infrastructure.</p>
 </div>
-<div class="gap-card">
+<div class="problem-card">
 <h4>Hospitality Focus</h4>
 <p>Current studies lack holistic strategies for customer retention through waste management.</p>
 </div>
-<div class="gap-card">
+<div class="problem-card">
 <h4>Food Waste</h4>
 <p>Insufficient exploration of customer food wastage behaviors in hospitality.</p>
+</div>
 </div>
 </div>
 </div>
@@ -106,7 +108,8 @@
 <section class="slide">
 <h3>Aim of the Study</h3>
 <div class="content-center">
-<div class="aim-box">
+<div class="problem-wrapper">
+<div class="problem-card main">
 <p class="aim-text">
 To develop a <span class="highlight">web-based system</span> that incubates 
 <span class="highlight">smart-waste bins</span> across hospitality industries 
@@ -114,54 +117,67 @@ that tracks waste level, sends corresponding data to web-based service,
 and connects these industries to garbage collection services.
 </p>
 <div class="divider"></div>
-<p class="aim-footer"><strong>Goal:</strong> Enhance Customer Retention via Technology Acceptance Model (TAM)</p>
+<p><strong>Goal:</strong> Enhance Customer Retention via Technology Acceptance Model (TAM)</p>
+</div>
 </div>
 </div>
 </section>
 <section class="slide">
 <h3>Objectives (1-2)</h3>
-<div class="content-grid">
-<div class="objective-card">
+<div class="content-center">
+<div class="problem-wrapper">
+<div class="sub-problems">
+<div class="problem-card">
 <div class="obj-num">01</div>
 <h4>Literature Review</h4>
 <p>Conduct extensive review of current waste management technologies and their effectiveness in hospitality.</p>
 </div>
-<div class="objective-card">
+<div class="problem-card">
 <div class="obj-num">02</div>
 <h4>System Design</h4>
 <p>Design a web-based eco-tech architecture tailored for hospitality (Garbage collection, Smart Bins, Reviews).</p>
 </div>
 </div>
+</div>
+</div>
 </section>
 <section class="slide">
 <h3>Objectives (3-4)</h3>
-<div class="content-grid">
-<div class="objective-card">
+<div class="content-center">
+<div class="problem-wrapper">
+<div class="sub-problems">
+<div class="problem-card">
 <div class="obj-num">03</div>
 <h4>Implementation</h4>
 <p>Implement the system using appropriate tools (MERN Stack, IoT Sensors).</p>
 </div>
-<div class="objective-card">
+<div class="problem-card">
 <div class="obj-num">04</div>
 <h4>Evaluation</h4>
 <p>Evaluate usability, functionality, and user satisfaction through user testing and feedback.</p>
 </div>
 </div>
+</div>
+</div>
 </section>
 <section class="slide">
 <h3>Literature Review: Existing Systems</h3>
-<div class="content-grid">
-<div class="review-card">
+<div class="content-center">
+<div class="problem-wrapper">
+<div class="sub-problems">
+<div class="problem-card">
 <h4>WasteLinq</h4>
 <p>Waste management SaaS. Good for compliance but not specialized for hospitality.</p>
 </div>
-<div class="review-card">
+<div class="problem-card">
 <h4>Sensoneo</h4>
 <p>Smart sensors & route planning. Focuses on municipalities, lacks hospitality integration.</p>
 </div>
-<div class="review-card">
+<div class="problem-card">
 <h4>GarGeon</h4>
 <p>Business waste management. Geographically limited and specific.</p>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -194,20 +210,21 @@ and connects these industries to garbage collection services.
 <section class="slide">
 <h3>Hardware Components</h3>
 <div class="content-center">
-<div class="hardware-grid">
-<div class="hardware-card">
+<div class="problem-wrapper">
+<div class="sub-problems">
+<div class="problem-card">
 <div class="hardware-icon">📡</div>
 <h4>Ultrasonic Sensor</h4>
 <p class="hardware-model">HC-SR04</p>
 <p>Measures distance to waste surface to determine fill level.</p>
 </div>
-<div class="hardware-card">
+<div class="problem-card">
 <div class="hardware-icon">⚖️</div>
 <h4>Load Cell</h4>
 <p class="hardware-model">HX711</p>
 <p>Measures the physical weight of the waste.</p>
 </div>
-<div class="hardware-card">
+<div class="problem-card">
 <div class="hardware-icon">🔌</div>
 <h4>Microcontroller</h4>
 <p class="hardware-model">Arduino/ESP8266</p>
@@ -215,37 +232,37 @@ and connects these industries to garbage collection services.
 </div>
 </div>
 </div>
+</div>
 </section>
 <section class="slide">
 <h3>Sensor Logic & Algorithms</h3>
 <div class="content-center">
-<div class="logic-container">
-<div class="logic-card">
+<div class="problem-wrapper">
+<div class="problem-card main">
 <h4>Distance Calculation</h4>
 <div class="formula-box">
 Distance = (Time × Speed of Sound) / 2
 </div>
 <p>If Distance &lt; Threshold → Bin is FULL</p>
 </div>
-<div class="logic-steps">
-<h4>Operational Logic</h4>
-<div class="step-item">
+<div class="sub-problems">
+<div class="problem-card">
 <span class="step-num">1</span>
 <p>Sensors measure data</p>
 </div>
-<div class="step-item">
+<div class="problem-card">
 <span class="step-num">2</span>
 <p>MCU processes data</p>
 </div>
-<div class="step-item">
+<div class="problem-card">
 <span class="step-num">3</span>
 <p>If Level &gt; 90% → Status: FULL</p>
 </div>
-<div class="step-item">
+<div class="problem-card">
 <span class="step-num">4</span>
 <p>Send data to web server via API</p>
 </div>
-<div class="step-item">
+<div class="problem-card">
 <span class="step-num">5</span>
 <p>Notify garbage collector</p>
 </div>
@@ -333,44 +350,50 @@ Distance = (Time × Speed of Sound) / 2
 </section>
 <section class="slide">
 <h3>Significance of Study</h3>
-<div class="content-grid">
-<div class="objective-card">
+<div class="content-center">
+<div class="problem-wrapper">
+<div class="sub-problems">
+<div class="problem-card">
 <h4>Centralized Hub</h4>
 <p>Connects hospitality industries directly to waste collectors.</p>
 </div>
-<div class="objective-card">
+<div class="problem-card">
 <h4>Secure Payments</h4>
 <p>Standardized financial rates and secure gateways.</p>
 </div>
-<div class="objective-card">
+<div class="problem-card">
 <h4>Eco-Friendly Ecosystem</h4>
 <p>Reduces reliance on traditional, inefficient methods.</p>
 </div>
-<div class="objective-card">
+<div class="problem-card">
 <h4>Guest Experience</h4>
 <p>Clean environments lead to higher guest retention.</p>
+</div>
+</div>
 </div>
 </div>
 </section>
 <section class="slide">
 <h3>Expected Outcomes</h3>
 <div class="content-center">
-<div class="outcomes-grid">
-<div class="outcome-card">
+<div class="problem-wrapper">
+<div class="sub-problems">
+<div class="problem-card">
 <div class="outcome-icon">📊</div>
 <p>Real-time monitoring of waste levels in hospitality sectors</p>
 </div>
-<div class="outcome-card">
+<div class="problem-card">
 <div class="outcome-icon">🔔</div>
 <p>Automated alerts reducing overflow and health hazards</p>
 </div>
-<div class="outcome-card">
+<div class="problem-card">
 <div class="outcome-icon">🚛</div>
 <p>Efficient routing for garbage collectors (Cost/Fuel savings)</p>
 </div>
-<div class="outcome-card">
+<div class="problem-card">
 <div class="outcome-icon">✓</div>
 <p>Positive user acceptance based on TAM evaluation</p>
+</div>
 </div>
 </div>
 </div>
@@ -378,21 +401,25 @@ Distance = (Time × Speed of Sound) / 2
 <section class="slide">
 <h3>Conclusion</h3>
 <div class="content-center">
+<div class="problem-wrapper">
+<div class="problem-card main">
 <p class="lead">This project successfully designs a web-based system integrating IoT smart bins for the hospitality industry.</p>
 <div class="divider"></div>
-<p class="conclusion-subtitle">By addressing the research gap in customer-focused waste management, the system promotes:</p>
-<div class="conclusion-grid">
-<div class="conclusion-badge">
+<p>By addressing the research gap in customer-focused waste management, the system promotes:</p>
+</div>
+<div class="sub-problems">
+<div class="problem-card">
 <span class="badge-icon">🌱</span>
-<span>Sustainability</span>
+<p>Sustainability</p>
 </div>
-<div class="conclusion-badge">
+<div class="problem-card">
 <span class="badge-icon">⚡</span>
-<span>Operational Efficiency</span>
+<p>Operational Efficiency</p>
 </div>
-<div class="conclusion-badge">
+<div class="problem-card">
 <span class="badge-icon">⭐</span>
-<span>Improved Guest Retention</span>
+<p>Improved Guest Retention</p>
+</div>
 </div>
 </div>
 </div>
