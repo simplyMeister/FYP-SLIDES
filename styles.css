@@ -1,23 +1,33 @@
 /* =========================================
-   Modern Minimalist Presentation Theme
+   Variables & Reset - Dark Theme
    ========================================= */
-
+/* Converting to dark theme with gradient accents inspired by rceet-tech */
 :root {
-  /* Dark theme color palette */
-  --bg-primary: #0f1419;
+  /* Refined, sophisticated color palette inspired by professional design */
+  --bg-dark: #0a0d14;
+  --bg-card: #111823;
   --bg-secondary: #1a1f2e;
-  --text-primary: #e1e7ef;
-  --text-secondary: #8b93a6;
-  --accent: #3b82f6;
-  --accent-light: #60a5fa;
-  --border: #2d3548;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+  --text-primary: #e4e8f0;
+  --text-secondary: #9ca3af;
+  --text-tertiary: #6b7280;
+
+  /* Subtle, refined gradients */
+  --primary-gradient: linear-gradient(135deg, #5b6ef5 0%, #667eea 100%);
+  --accent-gradient: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  --glass-bg: rgba(17, 24, 35, 0.6);
+  --glass-border: rgba(91, 110, 245, 0.15);
+
+  /* Refined shadows and effects */
+  --shadow-xs: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 8px 32px rgba(91, 110, 245, 0.2);
+
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-serif: "Georgia", serif;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
-  --transition: all 0.2s ease;
 }
 
 * {
@@ -27,109 +37,129 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background: var(--bg-primary);
+  font-family: var(--font-main);
+  background: var(--bg-dark);
   color: var(--text-primary);
-  line-height: 1.6;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
 }
 
 /* =========================================
-   Layout
+   Layout Structure
    ========================================= */
-
+/* Dark background with animated gradient overlay */
 .presentation-container {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  background: var(--bg-dark);
+  background-image: radial-gradient(circle at 20% 50%, rgba(91, 110, 245, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
 }
 
+/* Modern glassmorphism top bar */
 .top-bar {
-  height: 60px;
-  padding: 0 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg-primary);
-  z-index: 100;
+  /* Refined top bar with softer blur and minimal border */
+  height: 64px;
+  padding: 0 3rem;
+  background: rgba(10, 13, 20, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(91, 110, 245, 0.08);
+  box-shadow: var(--shadow-xs);
 }
 
 .logo {
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--accent);
-  letter-spacing: -0.02em;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .slide-counter {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
+  font-family: "SF Mono", Monaco, "Courier New", monospace;
+  font-size: 0.85rem;
   font-weight: 500;
+  color: var(--text-tertiary);
+  letter-spacing: 0.05em;
 }
 
+/* Vibrant gradient progress bar */
 .progress-track {
-  flex: 1;
-  height: 2px;
-  background: var(--bg-secondary);
-  margin: 0 2rem;
-  border-radius: 2px;
-  overflow: hidden;
+  /* Minimalist progress bar with refined transition */
+  height: 3px;
+  background: rgba(91, 110, 245, 0.1);
+  border-radius: 4px;
+  margin: 0 3rem;
 }
 
 .progress-fill {
   height: 100%;
-  background: var(--accent);
+  background: var(--primary-gradient);
   width: 0%;
-  transition: width 0.3s ease;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 12px rgba(91, 110, 245, 0.4);
 }
 
 /* =========================================
-   Slides
+   Slides Area & Transitions
    ========================================= */
-
 .slides-wrapper {
   flex: 1;
   position: relative;
+  perspective: 1000px;
   overflow: hidden;
 }
 
 .slide {
-  position: absolute;
-  inset: 0;
-  padding: 3rem 4rem;
-  display: flex;
-  flex-direction: column;
+  /* Refined slide transitions with smoother easing */
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 4rem 5rem;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+
+  transform-origin: center center;
 }
 
+/* The "Morph" Effect States */
+/* Active: Centered, Visible */
+/* Enhanced slide transitions with more dramatic effects */
 .slide.active {
   opacity: 1;
   pointer-events: auto;
-  transform: translateX(0);
+  transform: scale(1) translateX(0) rotateY(0deg);
   z-index: 10;
+  filter: blur(0px);
 }
 
 .slide.prev {
-  transform: translateX(-100%);
+  transform: scale(0.92) translateX(-80px) rotateY(8deg);
   opacity: 0;
+  z-index: 0;
+  filter: blur(3px);
 }
 
 .slide.next {
-  transform: translateX(100%);
+  transform: scale(0.92) translateX(80px) rotateY(-8deg);
   opacity: 0;
+  z-index: 0;
+  filter: blur(3px);
 }
 
-/* =========================================
-   Content Layouts
-   ========================================= */
-
+/* Content Layouts */
 .content-center {
   display: flex;
   flex-direction: column;
@@ -137,288 +167,392 @@ body {
   justify-content: center;
   height: 100%;
   text-align: center;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .content-split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  height: 100%;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  height: 85%;
   align-items: center;
 }
 
-.content-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
+.content-grid,
 .content-grid-3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 2rem;
   margin-top: 2rem;
 }
 
-/* =========================================
-   Typography
-   ========================================= */
+.content-grid {
+  grid-template-columns: 1fr 1fr;
+}
+.content-grid-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
+/* Typography */
+/* Dark theme typography with gradient accents */
 h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-  color: var(--text-primary);
+  /* Professional typography hierarchy with refined sizing */
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
   letter-spacing: -0.02em;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 h2 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 400;
+  line-height: 1.6;
   color: var(--text-secondary);
-  margin-bottom: 2rem;
-  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
 }
 
 h3 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
   color: var(--text-primary);
+  margin-bottom: 2rem;
   letter-spacing: -0.01em;
-   justify-content: center; /* horizontal */
-    align-items: center;
+  position: relative;
+}
+
+h3::after {
+  /* Subtle underline for section headers */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 50px;
+  height: 3px;
+  background: var(--primary-gradient);
+  border-radius: 2px;
 }
 
 h4 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--text-primary);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.005em;
 }
-
 h5 {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
   color: var(--text-primary);
+  margin-bottom: 0.4rem;
 }
-
 p {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--text-secondary);
   margin-bottom: 1rem;
+  letter-spacing: -0.005em;
 }
 
 /* =========================================
-   Components
+   Components & Cards - Dark Theme
    ========================================= */
-
+/* Enhanced glassmorphism with glow effects */
 .glass {
-  background: var(--bg-primary);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-md);
-  border-radius: var(--radius-md);
+  /* Refined glassmorphism with softer effects */
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-lg);
 }
 
-/* Stats */
+/* Vibrant stat cards with gradient numbers */
 .stats-grid {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-
 .stat-card {
+  /* Enhanced stat cards with restrained animations */
   padding: 2rem;
-  background: var(--bg-secondary);
-  border-radius: var(--radius-md);
-  border-left: 3px solid var(--accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(91, 110, 245, 0.05), transparent 70%);
+  animation: pulse-soft 4s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
 }
 
 .stat-number {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--accent);
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1;
-  margin-bottom: 0.5rem;
+  z-index: 1;
+  position: relative;
 }
 
 .stat-label {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: var(--text-tertiary);
+  margin-top: 1rem;
+  z-index: 1;
+  position: relative;
 }
 
-/* Problem Cards */
+/* Modern problem cards with gradient borders */
 .problem-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
-
 .problem-card {
+  /* Refined problem cards with subtle hover effects */
   background: var(--bg-secondary);
-  padding: 1.5rem;
+  padding: 1.6rem;
   border-radius: var(--radius-md);
+  border: 1px solid rgba(91, 110, 245, 0.1);
   text-align: center;
-  border: 1px solid var(--border);
-  transition: var(--transition);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-xs);
 }
 
 .problem-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
+  border-color: rgba(91, 110, 245, 0.3);
   box-shadow: var(--shadow-md);
 }
 
 .problem-card.main {
-  background: var(--accent);
+  background: var(--primary-gradient);
   color: white;
-  padding: 2rem;
-  width: 100%;
-  max-width: 600px;
+  padding: 2.5rem;
   border: none;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: var(--shadow-glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.problem-card.main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  to {
+    transform: translateX(100%);
+  }
 }
 
 .problem-card.main h4,
 .problem-card.main p {
   color: white;
 }
-
 .sub-problems {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   width: 100%;
   justify-content: center;
 }
-
 .problem-card.sub {
   flex: 1;
   max-width: 250px;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
+}
+.problem-arrows {
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  display: flex;
+  gap: 6rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.3;
 }
 
 /* Objectives */
+/* Glowing objective cards */
 .objective-card {
+  /* Professional objective cards */
   background: var(--bg-secondary);
   padding: 2rem;
   border-radius: var(--radius-md);
-  border-left: 3px solid var(--accent);
-  transition: var(--transition);
+  border-left: 3px solid var(--primary-gradient);
+  box-shadow: var(--shadow-xs);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .objective-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
 
+.obj-num {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  font-size: 4rem;
+  font-weight: 900;
+  opacity: 0.08;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Tech Stack */
+/* Modern tech badges with hover effects */
 .tech-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   justify-content: center;
 }
-
 .tech-item {
+  /* Refined tech items */
   background: var(--bg-secondary);
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 1.8rem;
   border-radius: 50px;
+  border: 1px solid rgba(91, 110, 245, 0.1);
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  border: 1px solid var(--border);
-  transition: var(--transition);
-  font-size: 0.875rem;
-  font-weight: 500;
+  gap: 0.8rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-xs);
 }
 
 .tech-item:hover {
-  background: var(--accent);
-  color: white;
-  border-color: var(--accent);
+  transform: translateY(-2px);
+  border-color: rgba(91, 110, 245, 0.3);
+  box-shadow: var(--shadow-sm);
 }
 
 .tech-icon {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 8px rgba(102, 126, 234, 0.4));
 }
 
-/* Diagrams */
+/* Diagrams (CSS based) */
+/* Enhanced sensor diagram with glow */
 .sensor-diagram {
+  /* Enhanced sensor diagram */
   width: 200px;
-  height: 300px;
-  background: var(--bg-secondary);
-  border-radius: var(--radius-md);
-  margin: 0 auto;
+  height: 280px;
+  background: linear-gradient(135deg, #111823 0%, #0f1419 100%);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(91, 110, 245, 0.15);
+  box-shadow: var(--shadow-md);
+  margin: 0 auto;
 }
 
 .sensor-box {
-  background: var(--accent);
+  background: var(--primary-gradient);
   color: white;
-  padding: 0.5rem;
-  font-size: 0.75rem;
+  padding: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
   border-radius: var(--radius-sm);
   text-align: center;
-  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(91, 110, 245, 0.3);
 }
 
 .waste-level {
-  height: 60%;
-  background: var(--bg-primary);
-  border-radius: var(--radius-sm);
+  height: 55%;
+  background: rgba(91, 110, 245, 0.1);
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #5b6ef5;
   font-weight: 600;
-  color: var(--accent);
-  border: 2px dashed var(--border);
+  font-size: 0.85rem;
+  border: 2px solid rgba(91, 110, 245, 0.2);
 }
 
 /* Architecture */
+/* Modern architecture boxes with colored borders */
 .architecture-diagram {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
-
 .arch-column {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
 .arch-box {
-  padding: 1.25rem 1.5rem;
+  /* Professional architecture boxes */
+  padding: 1.4rem 1.8rem;
   background: var(--bg-secondary);
   border-radius: var(--radius-md);
   border: 2px solid;
   text-align: center;
   min-width: 140px;
-  transition: var(--transition);
-  font-size: 0.875rem;
-  font-weight: 500;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
 }
 
 .arch-box:hover {
-  transform: scale(1.02);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
-.arch-box.hardware { border-color: #ef4444; }
-.arch-box.server { border-color: #f59e0b; }
-.arch-box.db { border-color: #10b981; }
-.arch-box.client { border-color: #3b82f6; }
+.arch-box.hardware {
+  border-color: #ef4444;
+  box-shadow: none;
+}
+.arch-box.server {
+  border-color: #f59e0b;
+  box-shadow: none;
+}
+.arch-box.db {
+  border-color: #10b981;
+  box-shadow: none;
+}
+.arch-box.client {
+  border-color: #5b6ef5;
+  box-shadow: none;
+}
+.arch-arrow-right {
+  font-weight: bold;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
 
 /* Use Case */
 .diagram-container {
@@ -427,21 +561,46 @@ p {
   gap: 2rem;
   justify-content: center;
 }
-
+.actor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+.actor::before {
+  content: "👤";
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.system-boundary {
+  border: 2px solid var(--primary-blue);
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/* Modern use case ovals with gradient backgrounds */
 .use-case-oval {
-  border: 2px solid var(--accent);
-  padding: 0.75rem 2rem;
+  /* Enhanced use case ovals */
+  border: 2px solid rgba(91, 110, 245, 0.3);
+  padding: 0.8rem 2rem;
   border-radius: 50px;
   text-align: center;
-  background: var(--bg-primary);
-  font-size: 0.875rem;
-  font-weight: 500;
-  transition: var(--transition);
+  background: var(--bg-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-xs);
 }
 
 .use-case-oval:hover {
-  background: var(--accent);
+  background: var(--primary-gradient);
   color: white;
+  border-color: var(--primary-gradient);
+  transform: scale(1.02);
+  box-shadow: var(--shadow-glow);
 }
 
 /* TAM */
@@ -449,127 +608,96 @@ p {
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
 }
-
+/* Enhanced TAM nodes with glow effects */
 .tam-node {
-  border: 2px solid var(--border);
-  padding: 1rem 1.5rem;
+  /* Refined TAM nodes */
+  border: 1px solid rgba(91, 110, 245, 0.15);
+  padding: 1.2rem 1.6rem;
   border-radius: var(--radius-md);
   background: var(--bg-secondary);
   text-align: center;
-  font-weight: 500;
-  font-size: 0.875rem;
-  transition: var(--transition);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-xs);
 }
 
 .tam-node:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .tam-node.blue {
-  border-color: var(--accent);
-  background: var(--bg-primary);
+  border: 2px solid rgba(91, 110, 245, 0.3);
+  box-shadow: var(--shadow-sm);
 }
 
 .tam-node.solid {
-  background: var(--accent);
+  background: var(--primary-gradient);
   color: white;
-  border-color: var(--accent);
+  border: none;
+  box-shadow: var(--shadow-glow);
 }
-
 .tam-group.vertical {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-/* =========================================
-   Controls
-   ========================================= */
-
+/* Controls */
 .controls-container {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
   display: flex;
-  gap: 0.75rem;
+  gap: 1rem;
   z-index: 200;
 }
 
+/* Gradient buttons with glow on hover */
 .nav-btn {
-  background: var(--accent);
+  /* Refined navigation buttons */
+  background: var(--primary-gradient);
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.8rem;
   border-radius: 50px;
-  font-weight: 500;
+  font-weight: 600;
   color: white;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: var(--transition);
-  font-size: 0.875rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: var(--shadow-sm);
+  letter-spacing: -0.005em;
 }
 
 .nav-btn:hover:not(:disabled) {
-  background: var(--accent-light);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
 }
 
 .nav-btn:disabled {
-  opacity: 0.4;
+  opacity: 0.3;
   cursor: not-allowed;
+  background: rgba(148, 163, 184, 0.3);
 }
 
-/* =========================================
-   Utilities
-   ========================================= */
-
-.divider {
-  width: 60px;
-  height: 3px;
-  background: var(--accent);
-  border-radius: 2px;
-  margin: 1.5rem auto;
-}
-
-.highlight {
-  color: var(--accent);
-  font-weight: 600;
-}
-.highlight {
-   color : #00FF00;
-}
-
-.highlight-box {
-  background: var(--bg-secondary);
-  border-left: 3px solid var(--accent);
-  padding: 1.25rem;
-  border-radius: var(--radius-sm);
-  margin: 1.5rem 0;
-}
-
-.lead {
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-}
-
-/* =========================================
-   Animations
-   ========================================= */
-
+/* Animations */
+/* Enhanced animations with more dynamic motion */
 .animate-text {
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease forwards;
+  transform: translateY(30px);
+  animation: fadeInUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
-
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.3s; }
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
 
 @keyframes fadeInUp {
   to {
@@ -578,75 +706,81 @@ p {
   }
 }
 
-/* =========================================
-   Responsive Design
-   ========================================= */
+.animate-width {
+  width: 0;
+  animation: expandWidth 0.8s forwards;
+}
+@keyframes expandWidth {
+  to {
+    width: 100px;
+  }
+}
 
-@media (max-width: 1024px) {
-  .slide {
-    padding: 2rem 3rem;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-  }
-  
-  h3 {
-    font-size: 1.75rem;
-  }
+/* Responsive */
+/* Additional utility classes for dark theme */
+.divider {
+  /* Refined animations and utilities */
+  width: 100px;
+  height: 3px;
+  background: var(--primary-gradient);
+  border-radius: 2px;
+  margin: 1.5rem auto;
+  box-shadow: 0 0 12px rgba(91, 110, 245, 0.3);
+}
+
+.highlight {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.highlight-box {
+  background: var(--glass-bg);
+  border-left: 4px solid var(--primary-gradient);
+  padding: 1.4rem;
+  border-radius: var(--radius-md);
+  font-style: italic;
+  margin: 2rem 0;
+  box-shadow: var(--shadow-sm);
+  color: var(--text-secondary);
+}
+
+.lead {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.005em;
 }
 
 @media (max-width: 768px) {
   .slide {
-    padding: 1.5rem;
+    padding: 2.5rem 1.5rem;
   }
-  
   .content-split,
   .content-grid,
   .content-grid-3 {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    height: auto;
+    overflow-y: auto;
   }
-  
   h1 {
-    font-size: 2rem;
-  }
-  
-  h3 {
-    font-size: 1.5rem;
-  }
-  
-  .controls-container {
-    width: calc(100% - 2rem);
-    right: 1rem;
-    bottom: 1rem;
-    justify-content: space-between;
-  }
-  
-  .tam-flow {
-    flex-direction: column;
-  }
-  
-  .top-bar {
-    padding: 0 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .slide {
-    padding: 1rem;
-  }
-  
-  h1 {
-    font-size: 1.75rem;
-  }
-  
-  .stat-number {
     font-size: 2.5rem;
   }
-  
-  .tech-grid {
-    flex-direction: column;
-    align-items: stretch;
+  h3 {
+    font-size: 1.8rem;
+  }
+  .controls-container {
+    width: 100%;
+    justify-content: space-between;
+    right: 0;
+    padding: 0 2rem;
+    bottom: 1rem;
+  }
+
+  .top-bar {
+    padding: 0 1.5rem;
   }
 }
