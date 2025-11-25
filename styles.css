@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Poppins:wght@400;500;600;700&display=swap');
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -86,6 +87,7 @@ h1, h2, h3, h4, h5, h6 {
         hsl(200, 85%, 98%) 50%, 
         hsl(158, 64%, 96%) 100%);
     overflow: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Animated gradient orbs in background */
@@ -136,6 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-title {
     font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-family: 'Playfair Display', serif;
     font-weight: 800;
     margin-bottom: 24px;
     line-height: 1.1;
@@ -152,6 +155,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-subtitle {
     font-size: clamp(1.125rem, 2vw, 1.5rem);
+    font-family: 'Poppins', sans-serif;
     color: var(--muted-foreground);
     margin-bottom: 48px;
     line-height: 1.6;
