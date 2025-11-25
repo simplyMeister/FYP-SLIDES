@@ -464,6 +464,39 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     margin-bottom: 12px;
 }
+/* GRID: Two Columns */
+.methodology-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Left - Right */
+    gap: 30px;
+}
+
+/* Column */
+.methodology-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Each item block */
+.methodology-item {
+    display: flex;
+    flex-direction: column;
+    background: #fafafa;
+    border-left: 4px solid #4CAF50; /* Accent indicator */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+
+
+/* Responsive (Mobile: 1 column) */
+@media (max-width: 768px) {
+    .methodology-grid {
+        grid-template-columns: 1fr;  /* stack on small screens */
+    }
+}
 
 /* Card Text */
 .card-text {
